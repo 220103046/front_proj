@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+  <div class="weather-app">
+    <h1>Weather App</h1>
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Search for a city..." oninput="autoSuggest()">
+      <button onclick="getWeatherByCity()">Search</button>
+    </div>
+    <div class="unit-toggle">
+      <label>
+        <input type="radio" name="unit" value="metric" checked onclick="toggleUnit('metric')"> Celsius
+      </label>
+      <label>
+        <input type="radio" name="unit" value="imperial" onclick="toggleUnit('imperial')"> Fahrenheit
+      </label>
+    </div>
+    <button onclick="getWeatherByLocation()">Get Weather for Current Location</button>
+    <div class="current-weather">
+      <h2 id="cityName"></h2>
+      <div id="weatherIcon"></div>
+      <p id="temp"></p>
+      <p id="weatherDescription"></p>
+      <p id="humidity"></p>
+      <p id="windSpeed"></p>
+    </div>
+    <div class="forecast">
+      <h3>5-Day Forecast</h3>
+      <div id="forecastContainer"></div>
+    </div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>

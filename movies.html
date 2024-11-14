@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movies App</title>
+<link rel="stylesheet" href="movies.css">
+</head>
+<body>
+    <header>
+        <h1>Movies App</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for movies...">
+            <div id="suggestions" class="suggestions"></div>
+            <button id="searchButton">Search</button>
+        </div>
+        <div class="sort-options">
+            <button id="sortPopularity">Sort by Popularity</button>
+            <button id="sortReleaseDate">Sort by Release Date</button>
+            <button id="sortRating">Sort by Rating</button>
+            <button id="watchlistButton">View Watchlist</button> <!-- Кнопка для просмотра Watchlist -->
+        </div>
+    </header>
+    
+    <!-- Modal для Watchlist -->
+    <div id="watchlistModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeWatchlistModal">&times;</span>
+            <h2>Your Watchlist</h2>
+            <div id="watchlistContent"></div> <!-- Контейнер для фильмов из Watchlist -->
+        </div>
+    </div>
+    
+   <div id="moviesGrid" class="grid"></div>
+   <div id="movieDetailsModal" class="modal hidden">
+       <div class="modal-content">
+           <span id="closeModal">&times;</span>
+           <div id="movieDetails"></div>
+       </div>
+   </div>
+   <script src="movies.js"></script>
+</body>
+</html>

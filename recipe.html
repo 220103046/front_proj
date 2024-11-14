@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Recipe App</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#recently-viewed">Recents</a>
+            <a href="#favorites">Favorites</a>
+        </nav>
+        <div id="search-container">
+            <input type="text" id="search-input" placeholder="Search for recipes...">
+            <button id="search-btn">Search</button>
+            <ul id="suggestions"></ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Good Food, Good Mood</h1>
+        </div>
+    </section>
+    <section id="recipes-container"></section>
+    <!-- Recently Viewed Recipes Section -->
+    <section id="recently-viewed">
+        <h2>Recently Viewed Recipes</h2>
+        <div id="recently-viewed-container"><p>No recently viewed recipes yet.</p></div>
+    </section>
+
+    <!-- Favorites Section -->
+    <section id="favorites">
+        <h2>Favorites</h2>
+        <div id="favorites-container"><p>No favorite recipes yet.</p></div>
+    </section>
+
+    <!-- Recipe Modal -->
+    <div id="recipe-modal" class="modal" aria-labelledby="recipe-title" aria-describedby="instructions">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="recipe-title"></h2>
+            <button id="favorite-btn">Add to Favorites</button>
+            <h3>Ingredients</h3>
+            <ul id="ingredients-list"></ul>
+            <h3>Instructions</h3>
+            <p id="instructions"></p>
+            <h3>Nutritional Information</h3>
+            <p id="nutrition"></p>
+        </div>
+    </div>
+
+    <script src="recipe.js"></script>
+</body>
+</html>
